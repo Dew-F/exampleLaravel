@@ -1,0 +1,16 @@
+.posts-container {
+    display: grid;
+    font-size: 1rem;
+    border-bottom: 1px dashed #d3d9da;
+    grid-template-columns: 1fr min-content;
+}
+
+.posts-date {
+    color: #b2b4b3;
+    justify-self: end;
+    white-space: nowrap;
+}
+
+.posts-text {
+    word-break: break-all;
+}

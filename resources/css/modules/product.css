@@ -1,0 +1,138 @@
+.product {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: auto min-content;
+    color: black;
+}
+
+.product-block {
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+    grid-auto-flow: column;
+}
+
+.product-other {
+    display: grid;
+    grid-row: 2;
+    margin-bottom: 20px;
+}
+
+.product-block .image {
+    display: grid;
+    grid-column: 1;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    grid-template-rows: auto 60px;
+
+}
+
+.image-block {
+    display: grid;
+    grid-row: 1;
+    background-color: white;
+    height: min-content;
+    max-height: 500px;
+    border: 1px solid lightgray;
+}
+
+.product-info {
+    display: grid;
+    padding: 0px 2rem;
+    grid-column: 2;
+    width: 100%;
+    row-gap: 2px;
+    height: min-content;
+    grid-template-rows: repeat(auto, min-content);
+}
+
+.product-attributes li {
+    margin-left: 2.2rem;
+}
+
+.product-attributes h2 {
+    margin-bottom: 5px;
+}
+
+.product-attributes, .product-price, .product-price-description, .product-control  {
+    width: 100%;
+    max-width: 250px;
+    height: min-content;
+    align-self: end;
+}
+
+.product-price-description, .product-attributes, .product-description, .product-article, .product-price {
+    margin-top: 20px;
+}
+
+.product-price-description {
+    height: max-content;
+}
+
+.product-control {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    height: min-content;
+    max-height: 50px;
+}
+
+.product .product-control {
+    grid-template-columns: auto 1fr 1fr;
+}
+
+button.product-count {
+    display: grid;
+    float: left;
+    width: 25px;
+    height: 25px;
+    font-size: inherit;
+}
+
+.product-counter {
+    width: max-content;
+}
+
+input.product-count {
+    display: grid;
+    float: left;
+    width: auto;
+    max-width: 45px;
+    min-width: 20px;
+    height: 25px;
+    text-align: center;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.product-counter button {
+    display: grid;
+    text-align: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    outline: none;
+    align-items: center;
+    justify-items: center;
+}
+
+.product-control > button {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .product-block {
+        grid-template-columns: none;
+        grid-auto-flow: row;
+    }
+
+    .product-info {
+        grid-row: 2;
+        grid-column: 1;
+    }
+}

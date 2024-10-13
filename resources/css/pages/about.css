@@ -1,0 +1,87 @@
+.about-container {
+    background-color: white;
+}
+
+.about-container li {
+    margin-inline-start: 40px;
+}
+
+.map {
+    border: 1px solid lightgray;
+    margin-top: 0.5rem;
+}
+
+.about-container .tabs {
+    display: grid;
+    height: 50px;
+    background:  linear-gradient(#f2f6f7 25%, 25%, #bcbebd 75%);
+    box-shadow: inset 0 -10px 8px -8px gray;
+    grid-auto-flow: column;
+}
+
+.about-text {
+    padding: 1rem;
+}
+
+.about-container .tab {
+    display: grid;
+    height: 100%;
+    width: 285px;
+    font-size: 1.2rem;
+    background-color: white;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    justify-self: left;
+}
+
+.about-manager {
+    display: grid;
+    grid-template-columns: 190px auto;
+    column-gap: 20px;
+    margin-bottom: 5px;
+}
+
+.about-manager-name {
+    font-size: 1.2rem;
+}
+
+.about-manager-text {
+    display: block;
+    align-self: center;
+}
+
+.about-manager-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    justify-self: center;
+}
+
+@media (max-width: 768px) {
+    .about-manager-image {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-manager-image {
+        width: 105px;
+        height: 105px;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-manager-image {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-manager-image {
+        width: 160px;
+        height: 160px;
+    }
+}

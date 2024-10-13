@@ -1,0 +1,152 @@
+.index {
+    display: grid;
+    grid-template-rows: minmax(350px, auto) auto;
+    color: #4c4c4b;
+}
+
+.index-other {
+    display: grid;
+    grid-row: 2;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
+}
+
+.index-other .catalog {
+    grid-column: 1;
+}
+
+.index-filters {
+    grid-column: 2;
+}
+
+.index .catalog-list li {
+    list-style: none;
+}
+
+.index .catalog-list a:hover {
+    cursor:pointer;
+}
+
+.index .catalog-list li > ul {
+    display: block;
+}
+
+.index .catalog-list li {
+    user-select: none;
+}
+
+.index .catalog-list > li {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+}
+
+.index .expand {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #B2B4B3;
+    content: "+";
+    border-radius: 100px;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    font-size: 1.4rem;
+    color: #B2B4B3;
+    user-select: none;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.index li a {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.index ul {
+    grid-column: 2;
+}
+
+.index .expand:hover {
+    border: 1px solid black;
+    color: black;
+}
+
+.catalog-block {
+    border: 1px solid #a8afb1;
+    margin-bottom: 30px;
+    padding: 20px 2rem;
+    background-color: white;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.catalog-block .catalog-title, .catalog-filters .catalog-title  {
+    display: grid;
+    justify-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.catalog-expand-block {
+    display: none;
+    border: 1px solid #747E80;
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: 50%;
+    width: 100%;
+    max-width: 50%;
+    min-height: 100%;
+    background-color: white;
+    padding: 10px;
+    user-select: none;
+}
+
+.catalog-expand-block > span.catalog-expand-close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 7px;
+    line-height: 1rem;
+    pointer-events: all;
+}
+
+.catalog-block {
+    position: relative;
+}
+
+.catalog-expand-block ul {
+    margin-left: 1rem;
+}
+
+.catalog-list .active a {
+    background-color:#747E80;
+    color: white;
+}
+
+.catalog-list .active .expand {
+    color: white;
+    background-color: #747E80;
+}
+
+@media (max-width:768px) {
+    .index-other {
+        grid-template-columns: none;
+        grid-auto-flow: row;
+    }
+    .index .filter {
+        grid-column: 1;
+        position: unset;
+        top: 0;
+    }
+    .catalog-expand-block {
+        position:inherit;
+        max-width: 100%;
+    }
+}

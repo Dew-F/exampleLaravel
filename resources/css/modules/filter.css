@@ -1,0 +1,142 @@
+.filter {
+    display: grid;
+    padding: 0 1.5rem;
+    height: min-content;
+    position: sticky;
+    top: 6rem;
+    color: black;
+    font-size: 1rem;
+    max-height: calc(100vh - 6rem);
+}
+
+.filter-attributes {
+    display: grid;
+    height: min-content;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    max-height: 500px;
+    grid-auto-rows: min-content;
+    padding-left: 1rem;
+}
+
+.filter .title {
+    justify-self: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-block {
+    display: none;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+    padding-left: 0.5rem;
+    grid-auto-rows: min-content;
+    max-height: 400px;
+}
+
+.filter-attributes::-webkit-scrollbar {
+    width: 5px;
+}
+
+.filter-attributes::-webkit-scrollbar-track {
+    background: white;
+    border: 1px solid transparent;
+    background-clip: content-box;
+}
+
+.filter-attributes::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 100px;
+}
+
+.filter-block::-webkit-scrollbar {
+    width: 5px;
+}
+
+.filter-block::-webkit-scrollbar-track {
+    background: lightgray;
+    border: 1px solid transparent;
+    background-clip: content-box;
+}
+
+.filter-block::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 100px;
+}
+
+.filter-name {
+    height: min-content;
+    font-size: 1.1rem;
+}
+
+.filter-name::before {
+    display:grid;
+    font-size: 0.9rem;
+    width: auto;
+    height: 100%;
+    float: left;
+    margin-left: -1rem;
+    content: '▷ ';
+    align-content: center;
+    justify-content: center;
+    transition: all 0.2s;
+
+}
+
+.filter .filter-name.opened::before {
+    transform-origin: center;
+    margin-top: 0.1rem;
+    transform: rotate(90deg);
+}
+
+.filter .filter-name:hover::before {
+    transform-origin: center;
+    margin-top: 0.1rem;
+    transform: rotate(90deg);
+}
+
+.filter .button {
+    display: block;
+    width: 100%;
+    height: 27px;
+    justify-self: center;
+    margin: 5px 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.filter .active {
+    background-color: #FF9F9F;
+    color: white;
+    border-radius: 10px;
+}
+
+.filter a {
+    cursor: pointer;
+    user-select: none;
+}
+
+.filter-name.filter-attributes {
+    display: none;
+}
+
+.filter-button {
+    margin-bottom: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    text-decoration: underline;
+}
+
+.filter-checkbox {
+    display: none;
+}
+
+.filter-checkbox:checked+.filter-button {
+    background-color: #FF9F9F;
+    color: white;
+    border-radius: 10px;
+}

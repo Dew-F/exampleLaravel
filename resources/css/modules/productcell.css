@@ -1,0 +1,79 @@
+.product-cell {
+    display: grid;
+    max-width: 205px;
+    min-height: 500px;
+    height: auto;
+    text-align: center;
+    transition: all 0.1s ease-in 0s;
+    grid-template-rows: 200px minmax(auto, 85px) min-content min-content min-content min-content;
+    position: relative;
+    padding: 0 10px;
+    outline:0px solid #ccc;
+}
+
+.product-cell-image {
+    padding: 0 0.5em;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    grid-row: 1;
+    transform:scale(0.9);
+    object-fit: contain;
+}
+
+.product-cell table {
+    justify-self: center;
+    max-width: 200px;
+    text-align: left;
+    width: 100%;
+    grid-row: 3;
+}
+
+.product-cell tr td:nth-child(2n) {
+    text-align: right;
+}
+
+.product-cell:hover {
+    outline:1px solid #ccc;
+	box-shadow:0px 0px 5px #ccc;
+}
+
+.product-cell:hover > a > .product-cell-image {
+	transform:scale(1);
+    z-index: 1;
+}
+
+.product-cell-name {
+    display: block;
+    max-height: 85px;
+    overflow-y: hidden;
+    justify-self: center;
+    grid-row: 2;
+
+}
+
+.product-cell-name:hover {
+    background-color: white;
+    position: absolute;
+    max-height: none;
+    height: min-content;
+    margin: 0 10px;
+    z-index: 1;
+    text-align: center;
+    grid-row: 2;
+}
+
+.product-cell-article{
+    grid-row: 4;
+}
+
+.product-cell .product-control {
+    grid-row: 5;
+    justify-self: center;
+    max-width: 200px;
+}
+
+.product-cell-other {
+    grid-row: 6;
+    padding-top: 10px;
+}

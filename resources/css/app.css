@@ -1,0 +1,28 @@
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel/dist/assets/owl.theme.default.css';
+
+@import 'general/normilize';
+@import 'general/general';
+@import 'general/structure';
+@import 'general/fonts';
+
+@import 'modules/header';
+@import 'modules/main';
+@import 'modules/footer';
+@import 'modules/product';
+@import 'modules/carousel';
+@import 'modules/productcell';
+@import 'modules/post';
+@import 'modules/productcart';
+@import 'modules/filter';
+@import 'modules/paginator';
+
+@import 'pages/auth'; /*changepassword, login, register, forget, callback*/
+@import 'pages/posts';
+@import 'pages/about';
+@import 'pages/index';
+@import 'pages/category';
+@import 'pages/cart';
+@import 'pages/custom';
+@import 'pages/production';
+@import 'pages/order-complete';

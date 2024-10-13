@@ -1,0 +1,22 @@
+.production li {
+    list-style: none;
+    margin-left: 1rem;
+}
+.production.tab-container {
+    display: block;
+    grid-template-columns: none;
+}
+
+.production {
+    color: #4C4C4B;
+}
+
+.production .catalog-list > li > a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.production .catalog-list > li > ul > li > a {
+    font-weight: bold;
+    color: #4C4C4B;
+}

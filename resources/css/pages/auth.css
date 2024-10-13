@@ -1,0 +1,41 @@
+.loginWrapper, .forgetWrapper {
+	width: 400px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form#login > input, form#register > input, form#pwdchng > input, form#callback > input, form#password-restore > input, form#password-request > input {
+	text-align:center;
+	width:280px;
+	height:30px;
+	outline:none;
+	font-size:17px;
+	padding:0 10px;
+	margin-top: 3px;
+    border: 1px solid #b2b4b3;
+}
+
+form#login > button, form#register > button, form#pwdchng > button,  form#callback > button, form#password-restore  > button, form#password-request > button {
+	width: 200px;
+    height: 25px;
+    line-height: 20px;
+    font-size: 17px;
+    margin-top: 3px;
+}
+
+.loginWrapper > a {
+	color:#4bb3ff;
+}
+
+.redText {
+    color: red;
+}
+
+.greenText {
+    color: green;
+}
+
+.recaptcha {
+	display: grid;
+	justify-items: center;
+}

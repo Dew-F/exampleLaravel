@@ -1,0 +1,37 @@
+.paginator {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(min-content);
+    column-gap: 5px;
+    padding: 10px;
+    justify-content: center;
+    background-color: white;
+}
+
+.paginator a {
+    display: block;
+    border: 1px solid black;
+    padding: 0px 0.2rem;
+    border-radius: 3px;
+}
+
+.paginator span {
+    display: block;
+    width: 0.8rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.paginator a:hover {
+    text-decoration: none;
+}
+
+.paginator a:hover > span {
+    transform: scale(1.2);
+}
+
+.paginator a.active {
+    border: 1px solid #EE0000;
+    color: #EE0000;
+}

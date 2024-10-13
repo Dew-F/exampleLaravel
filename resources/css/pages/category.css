@@ -1,0 +1,114 @@
+.category {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
+}
+
+.category .category-container {
+    display: block;
+    grid-column: 1;
+}
+
+.category .filter {
+    display: grid;
+    grid-column: 2;
+}
+
+.category .tab, .custom .tab {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background-color: #bcbebd;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.category .tabs, .custom .tabs {
+    display: grid;
+    height: 70px;
+    grid-auto-flow: column;
+    grid-template-columns: 4fr 1fr;
+}
+
+.category .active, .custom .active {
+    color: black;
+    background-color: white;
+}
+
+.category .info {
+    background-color: white;
+    text-align: center;
+    font-size: 17px;
+}
+
+.category .tab-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 203px));
+    gap: 2px;
+    background-color: white;
+    justify-content: center;
+}
+
+#category-footer-button {
+    padding: 3px 2px;
+    margin-bottom: 10px;
+}
+
+#category-footer-text {
+    display: none;
+
+}
+
+@media (max-width:768px) {
+    .category {
+        grid-template-columns: none;
+        grid-auto-flow: row;
+    }
+    .category .filter {
+        position: unset;
+        top: 0;
+        grid-column: 1;
+    }
+    .category .tab-container {
+        grid-template-columns: repeat(2, minmax(150px, 203px));
+    }
+    .category .product-control {
+        grid-template-columns: none;
+        grid-template-rows: 25px 25px;
+        justify-items: center;
+        width: min-content;
+        row-gap: 5px;
+    }
+    .category .tabs, .custom .tabs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .category .tab-container {
+        grid-template-columns: repeat(3, minmax(150px, 203px));
+    }
+    .category .tabs, .custom .tabs {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .category .tab-container {
+        grid-template-columns: repeat(4, minmax(150px, 203px));
+    }
+    .category .tabs, .custom .tabs {
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    header > .wrapper {
+        max-width: 1200px;
+    }
+    .category .tab-container {
+        grid-template-columns: repeat(4, minmax(150px, 203px));
+    }
+}

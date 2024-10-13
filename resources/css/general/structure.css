@@ -1,0 +1,105 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6rem auto min-content 0px;
+    min-height: 100vh;
+}
+
+header {
+    display: grid;
+    grid-row: 1;
+}
+
+main {
+    display: grid;
+    grid-column: 1;
+}
+
+.wrapper {
+    display: grid;
+    position: relative;
+    width: 100%;
+    justify-self: center;
+    padding: 0 1.21rem;
+}
+
+footer {
+    display: block;
+    grid-row: 3;
+}
+
+@media (max-width: 768px) {
+    body > .wrapper {
+        max-width: 540px;
+    }
+    .logoContainer {padding:0;}
+    .burger {
+        display:flex;
+        }
+    .nav {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        flex-direction:column;
+        align-items: start;
+        padding:2vw;
+        width: 100%;
+        position: absolute;
+        /*top: -35%;*/
+        top: 0;
+        right: 0;
+        background-color:white;
+        z-index:10;
+        background: linear-gradient(0deg,#d6dee0,#f2f6f7);
+        box-shadow: none;
+        transition:all .4s cubic-bezier(0.88, 0.2, 0.51, 0.99);
+        transform: translateY(-100%);
+        }
+    .nav.opened {
+        top:0;
+        transform: translateY(0);
+        box-shadow: 0px -5px 21px black;
+        }
+
+		.optionsText[data-toggle='collapse'] {
+			padding-top: 0.6rem;
+		}
+		.optionsText.collapsed[data-toggle='collapse']::before,
+		.optionsText[data-toggle='collapse']::before {
+				content: '+';
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				margin-right: 0.5rem;
+				line-height: 17px;
+				text-align: center;
+				border: 1px solid #b2b4b3;
+				border-radius: 50%;
+				color: #b2b4b3;
+				transition: all 0.2s ease-out 0s;
+		}
+		.optionsText[data-toggle='collapse'][aria-expanded='true']::before {
+				content: '-';
+		}
+}
+
+@media (min-width: 768px) {
+    body > .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    body > .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    header > .wrapper {
+        max-width: 1200px;
+    }
+    body > .wrapper {
+        max-width: 1140px;
+    }
+}
